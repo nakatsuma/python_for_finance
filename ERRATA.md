@@ -11,7 +11,7 @@
 #### コード3.2 pyfin\_bond\_duration\_convexity.py
 + 第52行の最後に＼を追加する
 
-#### pyfin_risk_parity.py
+#### コード5.4 pyfin\_risk\_parity.py
 + 第6行のaをとる
 
 #### CVXPYとWindows版Anacondaの互換性（2018年3月16日に確認）
