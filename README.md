@@ -4,7 +4,7 @@
 
 #### 第2章
 + コード2.1 pyfin\_interest.py
-- コード2.2 pyfin\_npv\_irr.py
++ コード2.2 pyfin\_npv\_irr.py
 
 #### 第3章
 + コード3.1 pyfin\_bond\_yield\_price.py
@@ -18,7 +18,7 @@
 + コード4.4 pyfin\_mvf\_example3.py
 
 #### 第5章
-- コード5.1 pyfin\_ad\_portfolio.py
++ コード5.1 pyfin\_ad\_portfolio.py
 + コード5.2 pyfin\_sv\_portfolio.py
 + コード5.3 pyfin\_es\_portfolio.py
 + コード5.4 pyfin\_risk\_parity.py
