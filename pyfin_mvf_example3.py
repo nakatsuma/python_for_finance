@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-#    NumPyの読み込み
+#   NumPyの読み込み
 import numpy as np
-#    CVXPYの読み込み
+#   CVXPYの読み込み
 import cvxpy as cvx
-#    Pandasの読み込み
+#   Pandasの読み込み
 import pandas as pd
-#    MatplotlibのPyplotモジュールの読み込み
+#   MatplotlibのPyplotモジュールの読み込み
 import matplotlib.pyplot as plt
-#    日本語フォントの設定
+#   日本語フォントの設定
 from matplotlib.font_manager import FontProperties
 import sys
 if sys.platform.startswith('win'):
@@ -17,14 +17,14 @@ elif sys.platform.startswith('darwin'):
 elif sys.platform.startswith('linux'):
     FontPath = '/usr/share/fonts/truetype/takao-gothic/TakaoExGothic.ttf'
 jpfont = FontProperties(fname=FontPath)
-# %% 収益率データの読み込み
+#%% 収益率データの読み込み
 R = pd.read_csv('asset_return_data.csv', index_col=0)
 T = R.shape[0]
 N = R.shape[1]
 Mu = R.mean().values
 Sigma = R.cov().values * ((T - 1.0) / T)
 Return_Dev = (R - Mu).values / np.sqrt(T)
-# %% 空売り制約の下での分散最小化問題の設定
+#%% 空売り制約の下での分散最小化問題の設定
 Weight = cvx.Variable(N)
 Deviation = cvx.Variable(T)
 Target_Return = cvx.Parameter(sign='positive')
@@ -34,13 +34,13 @@ Opt_Portfolio = cvx.Problem(cvx.Minimize(Risk_Variance),
                              Weight.T*Mu == Target_Return,
                              cvx.sum_entries(Weight) == 1.0,
                              Weight >= 0.0])
-# %% 空売り制約の下での最小分散フロンティアの計算
+#%% 空売り制約の下での最小分散フロンティアの計算
 V_Target = np.linspace(Mu.min(), Mu.max(), num=250)
 V_Risk = np.zeros(V_Target.shape)
 for idx, Target_Return.value in enumerate(V_Target):
     Opt_Portfolio.solve()
     V_Risk[idx] = np.sqrt(Risk_Variance.value)
-# %% 最小分散フロンティアのグラフの作成
+#%% 最小分散フロンティアのグラフの作成
 fig1 = plt.figure(1, facecolor='w')
 plt.plot(V_Risk, V_Target, 'k-')
 plt.plot(np.sqrt(np.diagonal(Sigma)), Mu, 'kx')

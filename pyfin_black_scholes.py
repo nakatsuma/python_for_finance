@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
-#    NumPyの読み込み
+#   NumPyの読み込み
 import numpy as np
-#    SciPyのstatsモジュールの読み込み
+#   SciPyのstatsモジュールの読み込み
 import scipy.stats as st
-# %% Black-Scholeの公式によるヨーロピアン・コールオプション価格の計算
+#%% Black-Scholeの公式によるヨーロピアン・コールオプション価格の計算
 S = 100.0
 K = 100.0
 r = 0.01

@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-#    NumPyの読み込み
+#   NumPyの読み込み
 import numpy as np
-#    NumPyのPolynomialモジュールの読み込み
+#   NumPyのPolynomialモジュールの読み込み
 import numpy.polynomial.polynomial as pol
-#    MatplotlibのPyplotモジュールの読み込み
+#   MatplotlibのPyplotモジュールの読み込み
 import matplotlib.pyplot as plt
-#    日本語フォントの設定
+#   日本語フォントの設定
 from matplotlib.font_manager import FontProperties
 import sys
 if sys.platform.startswith('win'):
@@ -15,7 +15,7 @@ elif sys.platform.startswith('darwin'):
 elif sys.platform.startswith('linux'):
     FontPath = '/usr/share/fonts/truetype/takao-gothic/TakaoExGothic.ttf'
 jpfont = FontProperties(fname=FontPath)
-# %% キャッシュフローのグラフ
+#%% キャッシュフローのグラフ
 Periods = np.linspace(0, 4, 5)
 V_CF = np.array([[-5.0, 1.5, 1.5, 1.5, 1.5],
                  [-7.0, 2.0, 2.0, 2.0, 2.0],
@@ -33,10 +33,10 @@ for fig_num in range(4):
         plt.xlabel(u'時点', fontproperties=jpfont)
     if fig_num == 0 or fig_num == 2:
         plt.ylabel(u'キャッシュフロー', fontproperties=jpfont)
-    if fig_num == 1 or fig_num == 0:
+    if fig_num == 0 or fig_num == 1:
         plt.xticks([])
 plt.show()
-# %% 正味現在価値の計算
+#%% 正味現在価値の計算
 def NPV(r, CF):
     #       r: 割引率 (%)
     #      CF: キャッシュフロー
@@ -47,7 +47,7 @@ r = 5 # 割引率はパーセント単位
 V_NPV = np.zeros(4)
 for cf_num in range(4):
     V_NPV[cf_num] = NPV(r, V_CF[cf_num, :])
-# %% 内部収益率の計算
+#%% 内部収益率の計算
 def IRR(CF):
     #      CF: キャッシュフロー
     #  Output: 内部収益率 (%)

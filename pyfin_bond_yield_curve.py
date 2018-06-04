@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-#    NumPyの読み込み
+#   NumPyの読み込み
 import numpy as np
-#    NumPyのPolynomialモジュールの読み込み
+#   NumPyのPolynomialモジュールの読み込み
 import numpy.polynomial.polynomial as pol
-#    NumPyのLinalgモジュールの読み込み
+#   NumPyのLinalgモジュールの読み込み
 import numpy.linalg as lin
-#    MatplotlibのPyplotモジュールの読み込み
+#   MatplotlibのPyplotモジュールの読み込み
 import matplotlib.pyplot as plt
-#    日本語フォントの設定
+#   日本語フォントの設定
 from matplotlib.font_manager import FontProperties
 import sys
 if sys.platform.startswith('win'):
@@ -17,7 +17,7 @@ elif sys.platform.startswith('darwin'):
 elif sys.platform.startswith('linux'):
     FontPath = '/usr/share/fonts/truetype/takao-gothic/TakaoExGothic.ttf'
 jpfont = FontProperties(fname=FontPath)
-# %% 債券利回りの計算
+#%% 債券利回りの計算
 def Bond_Yield(Price, Maturity, CouponRate, FaceValue):
     #      Price: 債券価格
     #   Maturity: 残存期間
@@ -30,8 +30,8 @@ def Bond_Yield(Price, Maturity, CouponRate, FaceValue):
     Real = np.real(Roots[np.isreal(Roots)])
     Positive = np.asscalar(Real[Real > 0.0])
     return (1.0 / Positive - 1.0) * 100
-# %% 債券の利回り曲線
-#    債券データ: 1列目-市場価格，2列目-残存期間，3列目-表面利率
+#%% 債券の利回り曲線
+#   債券データ: 1列目-市場価格，2列目-残存期間，3列目-表面利率
 Bond = np.array([
     [ 99.90,  1, 2.0],
     [100.10,  2, 2.3],

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-#    NumPyの読み込み
+#   NumPyの読み込み
 import numpy as np
-#    原資産価格の二項木の生成
+#   原資産価格の二項木の生成
 def Binomial_Price_Tree(CurrentPrice, Uptick, NumberOfPeriods):
     #     CurrentPrice: 現時点の原資産価格
     #           Uptick: 原資産価格の上昇率（この逆数が下落率）
@@ -12,7 +12,7 @@ def Binomial_Price_Tree(CurrentPrice, Uptick, NumberOfPeriods):
     for i in range(NumberOfPeriods):
         Price = np.r_[Price * Uptick, Price[-1] / Uptick]
         yield Price
-#    ヨーロピアン・オプション価格の計算
+#   ヨーロピアン・オプション価格の計算
 def European_Option_Pricing(Payoff, DiscountFactor, RiskNeutralProb):
     #           Payoff: 利得の二項木
     #   DiscountFactor: 割引係数
@@ -24,7 +24,7 @@ def European_Option_Pricing(Payoff, DiscountFactor, RiskNeutralProb):
         Premium = (RiskNeutralProb * Premium[:-1] +
                    (1.0 - RiskNeutralProb) * Premium[1:]) * DiscountFactor
         yield Premium
-#    アメリカン・オプション価格の計算
+#   アメリカン・オプション価格の計算
 def American_Option_Pricing(Payoff, DiscountFactor, RiskNeutralProb):
     #           Payoff: 利得の二項木
     #   DiscountFactor: 割引係数
@@ -38,7 +38,7 @@ def American_Option_Pricing(Payoff, DiscountFactor, RiskNeutralProb):
                               + (1.0 - RiskNeutralProb) * Premium[1:])
                              * DiscountFactor)
         yield Premium
-# %% オプション価格の計算
+#%% オプション価格の計算
 S = 100.0
 K = 100.0
 u = 1.05
