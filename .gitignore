@@ -26,3 +26,6 @@ Temporary Items
 # Jupyter Notebook
 *.ipynb
 .ipynb_checkpoints/
+
+# Visual Studio Code
+.vscode/
