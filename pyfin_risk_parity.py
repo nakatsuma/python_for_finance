@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-#   NumPyの読み込み
+#%% NumPyの読み込み
 import numpy as np
 #   NumPyのLinalgモジュールの読み込み
 import numpy.linalg as lin

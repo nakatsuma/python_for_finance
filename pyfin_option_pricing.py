@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-#   NumPyの読み込み
+#%% NumPyの読み込み
 import numpy as np
 #   原資産価格の二項木の生成
 def Binomial_Price_Tree(CurrentPrice, Uptick, NumberOfPeriods):
