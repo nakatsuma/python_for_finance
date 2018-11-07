@@ -15,7 +15,7 @@ if sys.platform.startswith('win'):
 elif sys.platform.startswith('darwin'):
     FontPath = '/System/Library/Fonts/ヒラギノ角ゴシック W4.ttc'
 elif sys.platform.startswith('linux'):
-    FontPath = '/usr/share/fonts/truetype/takao-gothic/TakaoExGothic.ttf'
+    FontPath = '/usr/share/fonts/truetype/takao-gothic/TakaoPGothic.ttf'
 jpfont = FontProperties(fname=FontPath)
 #%% 収益率データの読み込み
 R = pd.read_csv('asset_return_data.csv', index_col=0)

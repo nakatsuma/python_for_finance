@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-#   NumPyの読み込み
+#%% NumPyの読み込み
 import numpy as np
 #   MatplotlibのPyplotモジュールの読み込み
 import matplotlib.pyplot as plt
@@ -7,11 +7,11 @@ import matplotlib.pyplot as plt
 from matplotlib.font_manager import FontProperties
 import sys
 if sys.platform.startswith('win'):
-    FontPath = 'C:\Windows\Fonts\meiryo.ttc'
+    FontPath = 'C:\\Windows\\Fonts\\meiryo.ttc'
 elif sys.platform.startswith('darwin'):
     FontPath = '/System/Library/Fonts/ヒラギノ角ゴシック W4.ttc'
 elif sys.platform.startswith('linux'):
-    FontPath = '/usr/share/fonts/truetype/takao-gothic/TakaoExGothic.ttf'
+    FontPath = '/usr/share/fonts/truetype/takao-gothic/TakaoPGothic.ttf'
 jpfont = FontProperties(fname=FontPath)
 #%% 単利と複利の比較
 r = 0.2        # 利率 20%
