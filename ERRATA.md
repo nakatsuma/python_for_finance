@@ -1,6 +1,6 @@
 # 「Pythonによるファイナンス入門」正誤表
 
-## 2018年8月10日改定
+## 2018年11月7日改定
 
 ### 誤植
 
@@ -30,10 +30,14 @@
 
 #### CVXPYとWindows版Anacondaの互換性（2018年3月16日に確認）
 
-+ Anacondaのバージョン5.1.0において、CVXPYが3.x系においてもWindows上で動作することを確認した。
++ Anacondaのバージョン5.1.0において，CVXPYが3.x系においてもWindows上で動作することを確認した．
 
 #### CVXPY1.0リリースに伴う修正点
 
 + 「sign='positive'」を「nonneg=True」に変更する
 + 「sum_entries」を「sum」に変更する
 + 修正を施したコードの名前の末尾には「_ver1」がついている
+
+#### Ubuntuにおける日本語フォントの変更
+
++ Ubuntuにおける日本語フォントをTakaoExGothic.ttfからTakaoPGothic.ttfに変更した．
