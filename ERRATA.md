@@ -31,17 +31,17 @@
 #### CVXPYとWindows版Anacondaの互換性（2018年3月16日に確認，2018年11月12日に追記）
 
 + Anacondaのバージョン5.1.0において，CVXPYが3.x系においてもWindows上で動作することを確認した．
-+ しかし，CVXPYはバージョン3.7に未対応のため，Anacondaのバージョン5.3以降は，以下の方法でインストールする必要がある．
++ しかし，CVXPYはバージョン3.7に未対応のため，Anacondaのバージョン5.3以降では，以下の方法でインストールする必要がある．
 
-```bash
+```IPython
 (base) C:\Users\Thomas> conda create -n finance python=3.6 jupyterlab seaborn spyder cvxgrp::cvxpy
 ```
 
 + この方法でインストールされるCVXPYはバージョン0.4である
-+ これにより「Jupyter Notebook (finance)」，「Spyder (finance)」という項目がスタートメニューに作成される．ここからJupyter NotebookやSpyderを起動すればCVXPYを使用できる．
-+ IPythonを使用する場合は，以下のコマンドを実行してからIPythonを開始する．
++ これにより**Jupyter Notebook (finance)**，**Spyder (finance)**という項目がスタートメニューに作成される．ここからJupyter NotebookやSpyderを起動すればCVXPYを使用できる．
++ IPythonを使用する場合は，以下のコマンドを実行してからIPythonを開始する．
 
-```bash
+```IPython
 (base) C:\Users\Thomas> conda activate finance
 ```
 
