@@ -38,7 +38,7 @@
 ```
 
 + この方法でインストールされるCVXPYはバージョン0.4である
-+ これにより**Jupyter Notebook (finance)**，**Spyder (finance)**という項目がスタートメニューに作成される．ここからJupyter NotebookやSpyderを起動すればCVXPYを使用できる．
++ これにより **Jupyter Notebook (finance)** および **Spyder (finance)** という項目がスタートメニューに作成される．ここからJupyter NotebookやSpyderを起動すればCVXPYを使用できる．
 + IPythonを使用する場合は，以下のコマンドを実行してからIPythonを開始する．
 
 ```IPython
