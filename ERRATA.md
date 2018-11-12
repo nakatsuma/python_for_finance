@@ -38,7 +38,7 @@
 ```
 
 + この方法でインストールされるCVXPYはバージョン0.4である
-+ これにより **Jupyter Notebook (finance)** および **Spyder (finance)** という項目がスタートメニューに作成される．ここからJupyter NotebookやSpyderを起動すればCVXPYを使用できる．
++ これにより **Jupyter Notebook (finance)** および **Spyder (finance)** という項目がスタートメニューに作成される．ここからJupyter NotebookやSpyderを起動すればCVXPYを使用できる．
 + IPythonを使用する場合は，以下のコマンドを実行してからIPythonを開始する．
 
 ```IPython
@@ -51,6 +51,6 @@
 + 「sum_entries」を「sum」に変更する
 + 修正を施したコードの名前の末尾には「_ver1」がついている
 
-#### Ubuntuにおける日本語フォントの変更（2018年11月7日に追記）
+#### Ubuntuにおける日本語フォントの変更（2018年11月7日に追記）
 
 + Ubuntuにおける日本語フォントをTakaoExGothic.ttfからTakaoPGothic.ttfに変更した．
