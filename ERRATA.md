@@ -1,6 +1,6 @@
 # 「Pythonによるファイナンス入門」正誤表
 
-## 2018年11月12日改定
+## 2019年3月2日改定
 
 ### 誤植
 
@@ -17,6 +17,11 @@
 
 + （誤）キャッシュフローは(3.2)で与えられるから，
 + （正）キャッシュフローは(3.1)で与えられるから，
+
+#### 123ページ8行目
+
++ （誤）maximum difersification portfolio
++ （正）maximum diversification portfolio
 
 #### コード3.2 pyfin\_bond\_duration\_convexity.py
 
