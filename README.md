@@ -2,10 +2,31 @@
 
 [朝倉書店ウェブサイト](https://www.asakura.co.jp/books/isbn/978-4-254-12894-9/ "朝倉書店ウェブサイト")
 
+---
+
++ [正誤表](ERRATA.md)
++ [PythonとCVXPYのインストール手順 (Anaconda 2019.03 対応)](#Python%E3%81%A8CVXPY%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%E6%89%8B%E9%A0%86-Anaconda-201903-%E5%AF%BE%E5%BF%9C)
+  + [ステップ1: Anacondaのインストール](#%E3%82%B9%E3%83%86%E3%83%83%E3%83%971-Anaconda%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB)
+  + [ステップ2: Microsoft Visual Studio Build Toolsのインストール (Windowsのみで必要)](#%E3%82%B9%E3%83%86%E3%83%83%E3%83%972-Microsoft-Visual-Studio-Build-Tools%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB-Windows%E3%81%AE%E3%81%BF%E3%81%A7%E5%BF%85%E8%A6%81)
+  + [ステップ3: CVXPYを実行する環境の設定](#%E3%82%B9%E3%83%86%E3%83%83%E3%83%973-CVXPY%E3%82%92%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B%E7%92%B0%E5%A2%83%E3%81%AE%E8%A8%AD%E5%AE%9A)
++ [Jupyter Notebookを始める方法](#Jupyter-Notebook%E3%82%92%E5%A7%8B%E3%82%81%E3%82%8B%E6%96%B9%E6%B3%95)
+  + [方法1: Anaconda Navigatorから起動する方法](#%E6%96%B9%E6%B3%951-Anaconda-Navigator%E3%81%8B%E3%82%89%E8%B5%B7%E5%8B%95%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95)
+  + [方法2: CLIから起動する方法](#%E6%96%B9%E6%B3%952-CLI%E3%81%8B%E3%82%89%E8%B5%B7%E5%8B%95%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95)
++ [Pythonコード](#Python%E3%82%B3%E3%83%BC%E3%83%89)
+  + [CVXPY1.0リリースに伴う修正点](#CVXPY10%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%81%AB%E4%BC%B4%E3%81%86%E4%BF%AE%E6%AD%A3%E7%82%B9)
+  + [第2章](#%E7%AC%AC2%E7%AB%A0)
+  + [第3章](#%E7%AC%AC3%E7%AB%A0)
+  + [第4章](#%E7%AC%AC4%E7%AB%A0)
+  + [第5章](#%E7%AC%AC5%E7%AB%A0)
+  + [第6章](#%E7%AC%AC6%E7%AB%A0)
+  + [コード4.3で生成した人工データの例](#%E3%82%B3%E3%83%BC%E3%83%8943%E3%81%A7%E7%94%9F%E6%88%90%E3%81%97%E3%81%9F%E4%BA%BA%E5%B7%A5%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E4%BE%8B)
+
+---
+
 ## 正誤表
 
 + [ERRATA.md](ERRATA.md)
-
+  
 ## PythonとCVXPYのインストール手順 (Anaconda 2019.03 対応)
 
 ### ステップ1: Anacondaのインストール
@@ -51,6 +72,8 @@
 ```
 
 とすれば，環境の設定が完了する．
+
+**注意:** Windowsでは，この作業により **Jupyter Notebook (finance)** および **Spyder (finance)** という項目がスタートメニューに作成されるので，ここからJupyter NotebookやSpyderを起動できる．
 
 ## Jupyter Notebookを始める方法
 
