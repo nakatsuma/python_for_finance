@@ -10,84 +10,88 @@
 
 ### ステップ1: Anacondaのインストール
 
-1. 古いAnacondaがインストールされているときは、この[手順](https://docs.anaconda.com/anaconda/install/uninstall/)でアンインストールしておく。
+1. 古いAnacondaがインストールされているときは，この[手順](https://docs.anaconda.com/anaconda/install/uninstall/)でアンインストールしておく．
 
 2. Anacondaのインストーラー (Windows, macOS or Linux) を[ここ](https://www.anaconda.com/distribution/)から入手する.
 
-3. ダウンロードしたインストーラーをダブルクリックして Anacondaのインストールを行う。
+3. ダウンロードしたインストーラーをダブルクリックしてAnacondaのインストールを行う．
 
-### Step 2: CVXPYを実行する環境の設定
+### ステップ2: Microsoft Visual Studio Build Toolsのインストール (Windowsのみで必要)
 
-`Anaconda Powershell Prompt` (Windows) あるいは `Terminal` (macOS, Linux) を立ち上げて、
+1. Microsoft Visual Studio Build Toolsのインストーラーを[ここ](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=16)から入手する．
 
-#### Windows
+2. ダウンロードしたインストーラーをダブルクリックしてインストールを行うが，インストールすべきものは`C++ build tools`だけである．[ここ](https://drive.google.com/file/d/0B4GsMXCRaSSIOWpYQkstajlYZ0tPVkNQSElmTWh1dXFaYkJr/view?usp=sharing)を参照．
 
-```IPython
-(base) C:\Users\Thomas> conda create -n finance python=3.6 jupyterlab seaborn spyder cvxgrp::cvxpy
-```
+### ステップ3: CVXPYを実行する環境の設定
 
-#### macOSおよびLinux
+`Anaconda Powershell Prompt` (Windows) あるいは `Terminal` (macOS, Linux) を立ち上げて，
 
 ```IPython
-(base) Bayes:~ Thomas$ conda create -n finance jupyterlab seaborn spyder conda-forge::cvxpy
+(base) PS C:\Users\Thomas> conda create -n finance jupyterlab seaborn spyder
 ```
 
-とする。続けて
+とする．続けて
 
 ```IPython
-(base) C:\Users\Thomas> conda activate finance
+(base) PS C:\Users\Thomas> conda activate finance
 ```
 
-とすると、以下のようにプロンプトが変わる。
+とすると，以下のようにプロンプトが変わる．
 
 ```IPython
-(finance) C:\Users\Thomas>
+(finance) PS C:\Users\Thomas>
 ```
 
-**注意:** IPythonを開始する際には必ず`conda activate finance`を先に実行しておくこと。
+**注意:** IPythonを開始する際には必ず`conda activate finance`を先に実行しておくこと．
 
 さらに
 
 ```IPython
-(finance) C:\Users\Thomas> python -m ipykernel install --user --name finance --display-name "Python (Finance)"
+(finance) PS C:\Users\Thomas> python -m ipykernel install --user --name finance --display-name "Python (Finance)"
 ```
 
-とすれば、環境の設定が完了する。
+とすれば，環境の設定が完了する．
 
 ## Jupyter Notebookを始める方法
 
 ### 方法1: Anaconda Navigatorから起動する方法
 
-`Anaconda Navigator`を`Start Menu` (Windows) か `Launchpad` (macOS) から起動する。 あるいは、`Anaconda Powershell Prompt` (Windows) か `Terminal` (macOS, Linux) を立ち上げて、
+`Anaconda Navigator`を`Start Menu` (Windows) か `Launchpad` (macOS) から起動する． あるいは，`Anaconda Powershell Prompt` (Windows) か `Terminal` (macOS, Linux) を立ち上げて，
 
 ```IPython
-(base) C:\Users\Thomas> anaconda-navigator
+(base) PS C:\Users\Thomas> anaconda-navigator
 ```
 
-としてもよい。そして、`Anaconda Navigator`で`Jupyter Notebook`の`Launch`ボタンをクリックする。
+としてもよい．そして，`Anaconda Navigator`で`Jupyter Notebook`の`Launch`ボタンをクリックする．
 
 ### 方法2: CLIから起動する方法
 
-`Anaconda Powershell Prompt` (Windows) か `Terminal` (macOS, Linux) を立ち上げて、
+`Anaconda Powershell Prompt` (Windows) か `Terminal` (macOS, Linux) を立ち上げて，
 
 ```IPython
-(base) C:\Users\Thomas> conda activate finance
-(finance) C:\Users\Thomas> jupyter notebook
+(base) PS C:\Users\Thomas> conda activate finance
+(finance) PS C:\Users\Thomas> jupyter notebook
 ```
 
-とする。
+とする．
 
-方法1あるいは方法2を実行すると、規定のブラウザーが立ち上がり、Jupyter Notebookが起動する。その画面の右上にある`New`のプルダウンメニューの中にある`Python (Finance)`を選んでNotebookを開始すればよい。
+方法1あるいは方法2を実行すると，規定のブラウザーが立ち上がり，Jupyter Notebookが起動する．その画面の右上にある`New`のプルダウンメニューの中にある`Python (Finance)`を選んでNotebookを開始すればよい．
 
-**注意:** `New`のプルダウンメニューの中にある`Python 3`を選んでNotebookを開始すると、CVXPYを使用することができない。
+**注意:** `New`のプルダウンメニューの中にある`Python 3`を選んでNotebookを開始すると，CVXPYを使用することができない．
 
 ## Pythonコード
 
 ### CVXPY1.0リリースに伴う修正点
 
-+ 「sign='positive'」を「nonneg=True」に変更する
-+ 「sum_entries」を「sum」に変更する
-+ 修正を施したコードの名前の末尾には「_ver1」がついている
++ 「sign='positive'」を「nonneg=True」に変更する．
++ 「sum_entries」を「sum」に変更する．
++ 最適化問題を安定的に解くため，以下のようにソルバーをECOSに設定する．
+
+```Python
+  Opt_Portfolio.solve(solver=cvx.ECOS)
+```
+
++ 修正を施したコードの名前の末尾には「_ver1」がついている．
 
 ### 第2章
 
