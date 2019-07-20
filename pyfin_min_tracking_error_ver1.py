@@ -42,7 +42,7 @@ for Month in range(0, BackTesting):
                                     [Index - Asset*Weight == Error,
                                      cvx.sum(Weight) == 1.0,
                                      Weight >= 0.0])
-    Min_TrackingError.solve()
+    Min_TrackingError.solve(solver=cvx.ECOS)
     V_Tracking[Month] = R.values[Month + MovingWindow, :].dot(Weight.value)
 #%% バックテストの結果のグラフ
 fig1 = plt.figure(1, facecolor='w')

@@ -38,7 +38,7 @@ Opt_Portfolio = cvx.Problem(cvx.Minimize(Risk_Variance),
 V_Target = np.linspace(Mu.min(), Mu.max(), num=250)
 V_Risk = np.zeros(V_Target.shape)
 for idx, Target_Return.value in enumerate(V_Target):
-    Opt_Portfolio.solve()
+    Opt_Portfolio.solve(solver=cvx.ECOS)
     V_Risk[idx] = np.sqrt(Risk_Variance.value)
 #%% 最小分散フロンティアのグラフの作成
 fig1 = plt.figure(1, facecolor='w')

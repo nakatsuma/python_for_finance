@@ -43,7 +43,7 @@ V_Risk = np.zeros((V_Target.shape[0], V_Alpha.shape[0]))
 for idx_col, Alpha.value in enumerate(V_Alpha):
     Alpha.value = V_Alpha[idx_col]
     for idx_row, Target_Return.value in enumerate(V_Target):
-        Opt_Portfolio.solve()
+        Opt_Portfolio.solve(solver=cvx.ECOS)
         V_Risk[idx_row, idx_col] = Risk_ES.value
 #%% 最小ESフロンティアのグラフの作成
 fig1 = plt.figure(1, facecolor='w')

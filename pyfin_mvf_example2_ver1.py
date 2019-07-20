@@ -45,7 +45,7 @@ V_Target = np.linspace(Mu.min(), Mu.max(), num=250)
 V_Risk = np.zeros(V_Target.shape)
 V_Weight = np.zeros((V_Target.shape[0], Mu.shape[0]))
 for idx, Target_Return.value in enumerate(V_Target):
-    Opt_Portfolio.solve()
+    Opt_Portfolio.solve(solver=cvx.ECOS)
     V_Weight[idx, :] = Weight.value.T
     V_Risk[idx] = np.sqrt(Risk_Variance.value)
 #%% 最小分散フロンティアの作図

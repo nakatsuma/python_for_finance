@@ -37,7 +37,7 @@ Opt_Portfolio = cvx.Problem(cvx.Minimize(Risk_AD),
 V_Target = np.linspace(Mu.min(), Mu.max(), num=250)
 V_Risk = np.zeros(V_Target.shape)
 for idx, Target_Return.value in enumerate(V_Target):
-    Opt_Portfolio.solve()
+    Opt_Portfolio.solve(solver=cvx.ECOS)
     V_Risk[idx] = Risk_AD.value
 #%% 最小平均絶対偏差フロンティアのグラフの作成
 fig1 = plt.figure(1, facecolor='w')
