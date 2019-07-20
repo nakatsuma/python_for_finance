@@ -19,7 +19,6 @@
   + [第4章](#%E7%AC%AC4%E7%AB%A0)
   + [第5章](#%E7%AC%AC5%E7%AB%A0)
   + [第6章](#%E7%AC%AC6%E7%AB%A0)
-  + [コード4.3で生成した人工データの例](#%E3%82%B3%E3%83%BC%E3%83%8943%E3%81%A7%E7%94%9F%E6%88%90%E3%81%97%E3%81%9F%E4%BA%BA%E5%B7%A5%E3%83%87%E3%83%BC%E3%82%BF%E3%81%AE%E4%BE%8B)
 
 ---
 
@@ -132,6 +131,7 @@
 + コード4.1 [pyfin\_mvf\_example1.py](pyfin_mvf_example1.py)
 + コード4.2 [pyfin\_mvf\_example2.py](pyfin_mvf_example2.py), [pyfin\_mvf\_example2\_ver1.py](pyfin_mvf_example2_ver1.py)
 + コード4.3 [pyfin\_asset\_return\_simulation.py](pyfin_asset_return_simulation.py)
++ コード4.3で生成した人工データの例 [asset\_return\_data.csv](asset_return_data.csv)
 + コード4.4 [pyfin\_mvf\_example3.py](pyfin_mvf_example3.py), [pyfin\_mvf\_example3\_ver1.py](pyfin_mvf_example3_ver1.py)
 
 ### 第5章
@@ -146,7 +146,3 @@
 
 + コード6.1 [pyfin\_option\_pricing.py](pyfin_option_pricing.py)
 + コード6.2 [pyfin\_black\_scholes.py](pyfin_black_scholes.py)
-
-### コード4.3で生成した人工データの例
-
-+ [asset\_return\_data.csv](asset_return_data.csv)
