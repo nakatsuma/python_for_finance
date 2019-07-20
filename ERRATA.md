@@ -1,6 +1,6 @@
 # 「Pythonによるファイナンス入門」正誤表
 
-## 2019年3月2日改定
+## 2019年7月20日改定
 
 ### 誤植
 
@@ -33,28 +33,78 @@
 
 ### 動作環境
 
-#### CVXPYとWindows版Anacondaの互換性（2018年3月16日に確認，2018年11月12日に追記）
+#### 最新版のCVXPYをインストールする方法（2019年7月20日に追記）
 
-+ Anacondaのバージョン5.1.0において，CVXPYが3.x系においてもWindows上で動作することを確認した．
-+ しかし，CVXPYはバージョン3.7に未対応のため，Anacondaのバージョン5.3以降では，以下の方法でインストールする必要がある．
-
-```IPython
-(base) C:\Users\Thomas> conda create -n finance python=3.6 jupyterlab seaborn spyder cvxgrp::cvxpy
-```
-
-+ この方法でインストールされるCVXPYはバージョン0.4である
-+ これにより **Jupyter Notebook (finance)** および **Spyder (finance)** という項目がスタートメニューに作成される．ここからJupyter NotebookやSpyderを起動すればCVXPYを使用できる．
-+ IPythonを使用する場合は，以下のコマンドを実行してからIPythonを開始する．
+まずAnaconda Powershell Prompt (Windows) あるいはターミナル (macOS、Linux) を開き，
 
 ```IPython
-(base) C:\Users\Thomas> conda activate finance
+(base) PS C:\Users\Thomas> conda create -n finance jupyterlab seaborn spyder
 ```
 
-#### CVXPY1.0リリースに伴う修正点
+を実行する．
+
+Windowsでは，これにより **Jupyter Notebook (finance)** および **Spyder (finance)** という項目がスタートメニューに作成されるので，ここからJupyter NotebookやSpyderを起動できる．
+
+続いて，以下のコマンド
+
+```IPython
+(base) PS C:\Users\Thomas> conda activate finance
+```
+
+を実行すると，プロンプトが
+
+```IPython
+(finance) PS C:\Users\Thomas>
+```
+
+と変わる．ここで続けて
+
+```IPython
+(finance) PS C:\Users\Thomas> pip install cvxpy
+```
+
+を実行すると，CVXPYがインストールされる．最後に
+
+```IPython
+(finance) PS C:\Users\Thomas> python -m ipykernel install --user --name finance --display-name "Python (Finance)"
+```
+
+を実行すると，`Python (Finance)`というカーネルが作成される．
+
+#### ターミナルからIPython，Jupyter Notebook，Spyderを起動する方法
+
+Anaconda Powershell Prompt (Windows) あるいはターミナル (macOS、Linux) を開き，
+
+```IPython
+(base) PS C:\Users\Thomas> conda activate finance
+```
+
+を実行する．そして，以下を実行する．
+
++ IPythonを起動する場合
+
+```IPython
+(finance) PS C:\Users\Thomas> ipython
+```
+
++ Jupyter Notebookを起動する場合
+
+```IPython
+(finance) PS C:\Users\Thomas> jupyter notebook
+```
+
++ Spyderを起動する場合
+
+```IPython
+(finance) PS C:\Users\Thomas> spyder
+```
+
+#### CVXPY1.0リリースに伴う修正点（2019年7月20日に追記）
 
 + 「sign='positive'」を「nonneg=True」に変更する
 + 「sum_entries」を「sum」に変更する
 + 修正を施したコードの名前の末尾には「_ver1」がついている
++ 最適化問題を安定的に解くためにソルバーをECOSに変更した
 
 #### Ubuntuにおける日本語フォントの変更（2018年11月7日に追記）
 
