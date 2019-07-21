@@ -64,13 +64,13 @@
 
 **注意:** IPythonを開始する際には必ず`conda activate finance`を先に実行しておくこと．
 
-さらに
+ここで
 
 ```IPython
 (finance) PS C:\Users\Thomas> pip install cvxpy
 ```
 
-とする．最後に
+とすると，CVXPYがインストールされる．最後に
 
 ```IPython
 (finance) PS C:\Users\Thomas> python -m ipykernel install --user --name finance --display-name "Python (Finance)"
