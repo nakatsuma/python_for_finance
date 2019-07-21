@@ -67,6 +67,12 @@
 さらに
 
 ```IPython
+(finance) PS C:\Users\Thomas> pip install cvxpy
+```
+
+とする．最後に
+
+```IPython
 (finance) PS C:\Users\Thomas> python -m ipykernel install --user --name finance --display-name "Python (Finance)"
 ```
 
