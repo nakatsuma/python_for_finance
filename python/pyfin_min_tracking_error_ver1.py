@@ -33,8 +33,8 @@ V_Tracking = np.zeros(BackTesting)
 Weight = cvx.Variable(N)
 Error = cvx.Variable(MovingWindow)
 TrackingError = cvx.sum_squares(Error)
-Asset_srT = R / np.sqrt(T)
-Index_srT = BenchmarkIndex / np.sqrt(T)
+Asset_srT = R / np.sqrt(MovingWindow)
+Index_srT = BenchmarkIndex / np.sqrt(MovingWindow)
 for Month in range(0, BackTesting):
     Asset = Asset_srT.values[Month:(Month + MovingWindow), :]
     Index = Index_srT.values[Month:(Month + MovingWindow)]
