@@ -109,6 +109,12 @@
 
 ## Pythonコード
 
+### CVXPY1.1リリースに伴う修正点
+
++ `Parameter()`で定義される変数は最適化問題の中で和か積の形で使われるようにする．ここでは期待ショートフォール最適化問題が当てはまる．
++ 行列やベクトルの積を表現するには`*`の代わりに`@`を使う．
++ 修正を施したコードの名前の末尾には「_ver1_1」がついている．
+
 ### CVXPY1.0リリースに伴う修正点
 
 + 「sign='positive'」を「nonneg=True」に変更する．
@@ -135,18 +141,23 @@
 ### 第4章
 
 + コード4.1 [pyfin\_mvf\_example1.py](python/pyfin_mvf_example1.py)
-+ コード4.2 [pyfin\_mvf\_example2.py](python/pyfin_mvf_example2.py), [pyfin\_mvf\_example2\_ver1.py](python/pyfin_mvf_example2_ver1.py)
++ コード4.2 [pyfin\_mvf\_example2.py](python/pyfin_mvf_example2.py), [pyfin\_mvf\_example2\_ver1.py](python/pyfin_mvf_example2_ver1.py),[pyfin\_mvf\_example2\_ver1\_1.py](python/pyfin_mvf_example2_ver1_1.py)
 + コード4.3 [pyfin\_asset\_return\_simulation.py](python/pyfin_asset_return_simulation.py)
 + コード4.3で生成した人工データの例 [asset\_return\_data.csv](python/asset_return_data.csv)
-+ コード4.4 [pyfin\_mvf\_example3.py](python/pyfin_mvf_example3.py), [pyfin\_mvf\_example3\_ver1.py](python/pyfin_mvf_example3_ver1.py)
++ コード4.4 [pyfin\_mvf\_example3.py](python/pyfin_mvf_example3.py), [pyfin\_mvf\_example3\_ver1.py](python/pyfin_mvf_example3_ver1.py),
+[pyfin\_mvf\_example3\_ver1\_1.py](python/pyfin_mvf_example3_ver1_1.py)
 
 ### 第5章
 
-+ コード5.1 [pyfin\_ad\_portfolio.py](python/pyfin_ad_portfolio.py), [pyfin\_ad\_portfolio\_ver1.py](python/pyfin_ad_portfolio_ver1.py)
-+ コード5.2 [pyfin\_sv\_portfolio.py](python/pyfin_sv_portfolio.py), [pyfin\_sv\_portfolio\_ver1.py](python/pyfin_sv_portfolio_ver1.py)
-+ コード5.3 [pyfin\_es\_portfolio.py](python/pyfin_es_portfolio.py), [pyfin\_es\_portfolio\_ver1.py](python/pyfin_es_portfolio_ver1.py)
++ コード5.1 [pyfin\_ad\_portfolio.py](python/pyfin_ad_portfolio.py), [pyfin\_ad\_portfolio\_ver1.py](python/pyfin_ad_portfolio_ver1.py),
+[pyfin\_ad\_portfolio\_ver1\_1.py](python/pyfin_ad_portfolio_ver1_1.py)
++ コード5.2 [pyfin\_sv\_portfolio.py](python/pyfin_sv_portfolio.py), [pyfin\_sv\_portfolio\_ver1.py](python/pyfin_sv_portfolio_ver1.py),
+[pyfin\_sv\_portfolio\_ver1\_1.py](python/pyfin_sv_portfolio_ver1_1.py)
++ コード5.3 [pyfin\_es\_portfolio.py](python/pyfin_es_portfolio.py), [pyfin\_es\_portfolio\_ver1.py](python/pyfin_es_portfolio_ver1.py),
+[pyfin\_es\_portfolio\_ver1\_1.py](python/pyfin_es_portfolio_ver1_1.py)
 + コード5.4 [pyfin\_risk\_parity.py](python/pyfin_risk_parity.py)
-+ コード5.5 [pyfin\_min\_tracking\_error.py](python/pyfin_min_tracking_error.py), [pyfin\_min\_tracking\_error\_ver1.py](python/pyfin_min_tracking_error_ver1.py)
++ コード5.5 [pyfin\_min\_tracking\_error.py](python/pyfin_min_tracking_error.py), [pyfin\_min\_tracking\_error\_ver1.py](python/pyfin_min_tracking_error_ver1.py),
+[pyfin\_min\_tracking\_error\_ver1\_1.py](python/pyfin_min_tracking_error_ver1_1.py)
 
 ### 第6章
 
