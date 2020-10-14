@@ -5,20 +5,23 @@
 ---
 
 + [正誤表](ERRATA.md)
-+ [PythonとCVXPYのインストール手順](#python%e3%81%a8cvxpy%e3%81%ae%e3%82%a4%e3%83%b3%e3%82%b9%e3%83%88%e3%83%bc%e3%83%ab%e6%89%8b%e9%a0%86)
-  + [ステップ1: Anacondaのインストール](#%E3%82%B9%E3%83%86%E3%83%83%E3%83%971-Anaconda%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB)
-  + [ステップ2: Microsoft Visual Studio Build Toolsのインストール (Windowsのみで必要)](#%E3%82%B9%E3%83%86%E3%83%83%E3%83%972-Microsoft-Visual-Studio-Build-Tools%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB-Windows%E3%81%AE%E3%81%BF%E3%81%A7%E5%BF%85%E8%A6%81)
-  + [ステップ3: CVXPYを実行する環境の設定](#%E3%82%B9%E3%83%86%E3%83%83%E3%83%973-CVXPY%E3%82%92%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B%E7%92%B0%E5%A2%83%E3%81%AE%E8%A8%AD%E5%AE%9A)
-+ [Jupyter Notebookを始める方法](#Jupyter-Notebook%E3%82%92%E5%A7%8B%E3%82%81%E3%82%8B%E6%96%B9%E6%B3%95)
-  + [方法1: Anaconda Navigatorから起動する方法](#%E6%96%B9%E6%B3%951-Anaconda-Navigator%E3%81%8B%E3%82%89%E8%B5%B7%E5%8B%95%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95)
-  + [方法2: CLIから起動する方法](#%E6%96%B9%E6%B3%952-CLI%E3%81%8B%E3%82%89%E8%B5%B7%E5%8B%95%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95)
-+ [Pythonコード](#Python%E3%82%B3%E3%83%BC%E3%83%89)
-  + [CVXPY1.0リリースに伴う修正点](#CVXPY10%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9%E3%81%AB%E4%BC%B4%E3%81%86%E4%BF%AE%E6%AD%A3%E7%82%B9)
-  + [第2章](#%E7%AC%AC2%E7%AB%A0)
-  + [第3章](#%E7%AC%AC3%E7%AB%A0)
-  + [第4章](#%E7%AC%AC4%E7%AB%A0)
-  + [第5章](#%E7%AC%AC5%E7%AB%A0)
-  + [第6章](#%E7%AC%AC6%E7%AB%A0)
++ [PythonとCVXPYのインストール手順](#pythonとcvxpyのインストール手順)
+  + [ステップ1: Anacondaのインストール](#ステップ1-anacondaのインストール)
+  + [ステップ2: 追加ツールのインストール](#ステップ2-追加ツールのインストール)
+    + [(Windows) Microsoft Visual Studio Build Toolsのインストール](#windows-microsoft-visual-studio-build-toolsのインストール) 
+    + [(macOS) Command Line Tools for Xcodeのインストール](#macos-command-line-tools-for-xcodeのインストール)
+  + [ステップ3: CVXPYを実行する環境の設定](#ステップ3-cvxpyを実行する環境の設定)
++ [Jupyter Notebookを始める方法](#jupyter-notebookを始める方法)
+  + [方法1: Anaconda Navigatorから起動する方法](#方法1-anaconda-navigatorから起動する方法)
+  + [方法2: CLIから起動する方法](#方法2-cliから起動する方法)
++ [Pythonコード](#pythonコード)
+  + [CVXPY1.1リリースに伴う修正点](#cvxpy11リリースに伴う修正点)
+  + [CVXPY1.0リリースに伴う修正点](#cvxpy10リリースに伴う修正点)
+  + [第2章](#第2章)
+  + [第3章](#第3章)
+  + [第4章](#第4章)
+  + [第5章](#第5章)
+  + [第6章](#第6章)
 
 ---
 
@@ -36,11 +39,27 @@
 
 3. ダウンロードしたインストーラーをダブルクリックしてAnacondaのインストールを行う．
 
-### ステップ2: Microsoft Visual Studio Build Toolsのインストール (Windowsのみで必要)
+### ステップ2: 追加ツールのインストール
+
+#### (Windows) Microsoft Visual Studio Build Toolsのインストール
 
 1. Microsoft Visual Studio Build Toolsのインストーラーを[ここ](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=16)から入手する．
 
 2. ダウンロードしたインストーラーをダブルクリックしてインストールを行うが，インストールすべきものは`C++ build tools`だけである．[ここ](https://drive.google.com/file/d/0B4GsMXCRaSSIOWpYQkstajlYZ0tPVkNQSElmTWh1dXFaYkJr/view?usp=sharing)を参照．
+
+#### (macOS) Command Line Tools for Xcodeのインストール
+
+1. `Xcode`をApp Storeからインストールする．
+
+2. `Xcode`を起動し、追加ツールのインストールを促すウィンドウが現れたら指示に従う．インストールが終わったら`Xcode`を閉じる．
+
+3. `Terminal`を立ち上げて
+
+``` IPython
+(base) MacBook-Pro :~ Thomas% sudo xcode-select --install
+```
+
+として`Command Line Tools for Xcode` のインストールを行う．
 
 ### ステップ3: CVXPYを実行する環境の設定
 
