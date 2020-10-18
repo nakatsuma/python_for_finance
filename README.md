@@ -8,7 +8,7 @@
 + [PythonとCVXPYのインストール手順](#pythonとcvxpyのインストール手順)
   + [ステップ1: Anacondaのインストール](#ステップ1-anacondaのインストール)
   + [ステップ2: 追加ツールのインストール](#ステップ2-追加ツールのインストール)
-    + [(Windows) Microsoft Visual Studio Build Toolsのインストール](#windows-microsoft-visual-studio-build-toolsのインストール) 
+    + [(Windows) Microsoft Visual Studio Build Toolsのインストール](#windows-microsoft-visual-studio-build-toolsのインストール)
     + [(macOS) Command Line Tools for Xcodeのインストール](#macos-command-line-tools-for-xcodeのインストール)
   + [ステップ3: CVXPYを実行する環境の設定](#ステップ3-cvxpyを実行する環境の設定)
 + [Jupyter Notebookを始める方法](#jupyter-notebookを始める方法)
