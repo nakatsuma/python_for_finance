@@ -21,7 +21,7 @@ elif sys.platform.startswith('linux'):
 jpfont = FontProperties(fname=FontPath)
 #%% 収益率データの読み込みとベンチマークの生成
 R = pd.read_csv('asset_return_data.csv', index_col=0)
-R = R.asfreq(pd.infer_freq(R.index))
+# R = R.asfreq(pd.infer_freq(R.index)) # この行は無視する
 T = R.shape[0]
 N = R.shape[1]
 np.random.seed(8888)
