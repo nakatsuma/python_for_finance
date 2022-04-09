@@ -28,7 +28,7 @@
 ## 正誤表
 
 + [ERRATA.md](ERRATA.md)
-  
+
 ## PythonとCVXPYのインストール手順
 
 ### ステップ1: Anacondaのインストール
@@ -56,7 +56,7 @@
 3. `Terminal`を立ち上げて
 
 ``` IPython
-(base) MacBook-Pro :~ Thomas% sudo xcode-select --install
+sudo xcode-select --install
 ```
 
 として`Command Line Tools for Xcode` のインストールを行う．
@@ -66,33 +66,37 @@
 `Anaconda Powershell Prompt` (Windows) あるいは `Terminal` (macOS, Linux) を立ち上げて，
 
 ```IPython
-(base) PS C:\Users\Thomas> conda create -n finance jupyterlab seaborn spyder
+conda create -n finance jupyterlab seaborn spyder
 ```
 
 とする．続けて
 
 ```IPython
-(base) PS C:\Users\Thomas> conda activate finance
+conda activate finance
 ```
 
-とすると，以下のようにプロンプトが変わる．
+とする。
+
+<!--
+と，以下のようにプロンプトが変わる．
 
 ```IPython
 (finance) PS C:\Users\Thomas>
 ```
+-->
 
 **注意:** IPythonを開始する際には必ず`conda activate finance`を先に実行しておくこと．
 
 ここで
 
 ```IPython
-(finance) PS C:\Users\Thomas> pip install cvxpy
+pip install cvxpy
 ```
 
 とすると，CVXPYがインストールされる．最後に
 
 ```IPython
-(finance) PS C:\Users\Thomas> python -m ipykernel install --user --name finance --display-name "Python (Finance)"
+python -m ipykernel install --user --name finance --display-name "Python (Finance)"
 ```
 
 とすれば，環境の設定が完了する．
@@ -106,7 +110,7 @@
 `Anaconda Navigator`を`Start Menu` (Windows) か `Launchpad` (macOS) から起動する． あるいは，`Anaconda Powershell Prompt` (Windows) か `Terminal` (macOS, Linux) を立ち上げて，
 
 ```IPython
-(base) PS C:\Users\Thomas> anaconda-navigator
+anaconda-navigator
 ```
 
 としてもよい．そして，`Anaconda Navigator`で`Jupyter Notebook`の`Launch`ボタンをクリックする．
@@ -116,8 +120,8 @@
 `Anaconda Powershell Prompt` (Windows) か `Terminal` (macOS, Linux) を立ち上げて，
 
 ```IPython
-(base) PS C:\Users\Thomas> conda activate finance
-(finance) PS C:\Users\Thomas> jupyter notebook
+conda activate finance
+jupyter notebook
 ```
 
 とする．
